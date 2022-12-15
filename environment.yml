@@ -1,0 +1,15 @@
+name: python-workshop
+channels:
+  - conda-forge
+dependencies:
+  - python
+  - numpy
+  - matplotlib
+  - h5netcdf
+  - ipython
+  - notebook
+  - cartopy
+  - pandas
+  - s3fs
+  - xarray
+  - scikit-image
