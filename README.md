@@ -152,7 +152,7 @@ Each notebook contains the full workflow for a single "beautiful" image. The ins
 ## Course Philosophy
 
 * Increase accessibility of NOAA satellite data and lower barriers to analysis
-* Promote the proper use of the satellite products in operations in research
+* Promote the proper use of the satellite products in operations and research
 * Teach Python using practical examples and real-world satellite datasets
 
 ## Acknowledgements
