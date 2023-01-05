@@ -10,7 +10,8 @@ Observations from NOAA’s geostationary (GOES-R) and polar-orbiting (JPSS) sate
 
 Participants in the Short Course will run live Python code using Jupyter Notebook. You must complete the following steps prior to the Course on January 8 to set up your computer! We recommend a machine running Windows or MacOS, because it is difficult to use Jupyter Notebook in Linux.
 
-___Note: We understand that some may not have administrative permissions on their computer or have another problem during the class. You can run the course interactively on the cloud using: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/modern-tools-workshop/AMS-python-workshop-2023.git/HEAD)___
+___Note: We understand that some may not have administrative permissions on their computer or have another problem during the class. You can run the course interactively on the cloud using: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/modern-tools-workshop/AMS-python-workshop-2023.git/HEAD). Binder does not require any installation, but any changes you make not be saved and your session will time out after 10 mins of inactivity. ___
+
 
 However, we recommend following the steps below so your computer is ready to go for all future Python endeavors!
 
