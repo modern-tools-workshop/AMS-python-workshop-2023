@@ -118,7 +118,7 @@ Install some jupyter add-ons into your base environment:
 conda install nb_conda_kernels
 ```
 
-### Step 4: If you are running Python < 3.8 (otherwise, skip to step 5)
+### Step 4 If you are running Python < 3.8 (otherwise, skip to step 5)
 
 Users running an older version of Python (3.8 or older): The Short Course will use three packages that are part of the standard Anaconda installation, so they should already be installed on your computer. Depending on the version of Python you have installed, however, you may need to update these packages:
 
@@ -137,16 +137,16 @@ pip install requests==2.27.1
 When asked if you want to proceed, type the letter "y" and press Enter, and the package should begin downloading.
 
 
-### Step 5: Set up Jupyter Notebook for the Short Course:
+### Step 5 Set up Jupyter Notebook for the Short Course
 
 * Follow [these instructions](https://www.star.nesdis.noaa.gov/atmospheric-composition-training/software_jupyter_notebook_set-up.php#launch_jupyter_notebook) to launch Jupyter Notebook on your computer.
 * Follow [these instructions](https://www.star.nesdis.noaa.gov/atmospheric-composition-training/software_jupyter_notebook_set-up.php#new_folder_upload_files) to make a new folder in Jupyter Notebook and upload to it the 6 Python files (.ipynb) you downloaded in Step 2.
 * Follow [these instructions](https://www.star.nesdis.noaa.gov/atmospheric-composition-training/software_jupyter_notebook_set-up.php#check_packages) to check that the additional packages installed in Step 3 were installed properly, and check that installed package versions match the recommendations listed in Steps 3 & 4 (including Matplotlib, Xarray, and Requests).
 
-Step 6: Watch these two short videos (optional but recommeded)
+Step 6 Watch these two short videos (optional but recommeded)
 
 These videos provide important background information on NOAA satellites that won't be covered in the Short Course:
-* [GOES-R Series Satellites and the ABI Sensor](https://youtu.be/iD6QQOmO6FA)(9 min)
+* [GOES-R Series Satellites and the ABI Sensor](https://youtu.be/iD6QQOmO6FA) (9 min)
 * [JPSS Satellites and the VIIRS Sensor](https://youtu.be/bZR1E_OZupQ) (7.5 min)
 
 ## Introduction
@@ -197,10 +197,10 @@ We will apply this workflow to a variety of sensors and satellites: imagers, sou
 
 3. Each of the remaining notebook contains the **full workflow for a single "beautiful" image**. You can work through them in any order if you are doing this course on your own time. The notebooks/images are:
 
-* viirs_aerosol.ipynb: Global L3 AOD from VIIRS
-* abi_rgb.ipynb: DustRGB from GOES-16 ABI channels
-* nucaps_skewt.ipynb: NUCAPS Skew-T from CrIS/ATMS on NOAA-20
-* viirs_aerosol.ipynb: L2 Active Fire from the VIIRS I-band
+* ```viirs_aerosol.ipynb```: Global L3 AOD from VIIRS
+* ```abi_rgb.ipynb```: DustRGB from GOES-16 ABI channels
+* ```nucaps_skewt.ipynb```: NUCAPS Skew-T from CrIS/ATMS on NOAA-20
+* ```viirs_aerosol.ipynb```: L2 Active Fire from the VIIRS I-band
 
 ## Course Philosophy
 
