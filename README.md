@@ -10,8 +10,7 @@ Observations from NOAA’s geostationary (GOES-R) and polar-orbiting (JPSS) sate
 
 Participants in the Short Course will run live Python code using Jupyter Notebook. You must complete the following steps prior to the Course on January 8 to set up your computer! We recommend a machine running Windows or MacOS, because it is difficult to use Jupyter Notebook in Linux.
 
-___Note: We understand that some may not have administrative permissions on their computer or have another problem during the class. You can run the course interactively on the cloud using: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/modern-tools-workshop/AMS-python-workshop-2023.git/HEAD). Binder does not require any installation, but any changes you make not be saved and your session will time out after 10 mins of inactivity.___
-
+___Note: We understand that some may not have administrative permissions on their computer or have another problem during the class. You can run the course interactively on the cloud clicking on the following icon: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/modern-tools-workshop/AMS-python-workshop-2023.git/HEAD). Binder does not require any installation, but any changes you make not be saved and your session will time out after 10 mins of inactivity.___
 
 However, we recommend following the steps below so your computer is ready to go for all future Python endeavors!
 
@@ -29,13 +28,19 @@ The zip file contains the files we will use in the Short Course, including 6 .ip
 * check_python_packages.ipynb
 * download_satellite_data.ipynb
 * environment.yml
-* nucaps.ipynb
+* nucaps_skewt.ipynb
 * viirs_aerosol.ipynb
 * viirs_fire.ipynb
 
-### Step 3: Install required packages
+### Step 3: Install required packages (If you're running Python > 3.8)
 
-The Short Course will use four Python packages that are not part of the standard Anaconda installation, so they have to be installed individually:
+The Short Course will use four Python packages that are not part of the standard Anaconda installation.
+
+#### Option 1: Install into your base environment
+
+You can install the packages individually in your base environment. We recommend learning [how to use environments](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) as you progress in your Python journey, but we the following steps may be simpler for new to intermediate users.
+
+The following packages must be installed individually:
 
 * netCDF4 version 1.5.7
 * Cartopy version 0.18.0
@@ -46,13 +51,9 @@ It is important that you follow the directions below to install the specified ve
 
 If you already have these packages installed, please check that they are the recommended version number.
 
-Alternatively, if you are comfortable setting up Python environments, use the ```environment.yml``` file downloaded in Step 2 to set up the "python-workshop" environment.
-
-
 Instructions to Install Packages:
 * Windows users: go to Start → Anaconda3 → Anaconda Powershell Prompt
 * Mac/Linux users: open the terminal
-
 
 Type (or copy and paste) the following commands into the terminal window one at a time and hit Enter:
 
@@ -74,10 +75,54 @@ Type the letter "y" and press Enter, and the package should begin downloading.
 
 NOTE: You may see an error message when installing "s3fs" related to the dependencies for the package "botocore". You can ignore this message; it won't affect the code we use in the Short Course.
 
+#### Option 2: Create a new environment
+
+Alternatively, if you are comfortable setting up Python environments (or interested in learning!), use the ```environment.yml``` file downloaded in Step 2 to set up the "python-workshop" environment.
+
+The environment will install all the necessary packages to run the workshop.
+
+```
+cd to/location/of/enviromment.yml
+conda env create -f environment.yml
+```
+
+Once it's done, type:
+
+```
+conda activate python-workshop
+```
+
+**This step might not work if you don't have admin privileges:**
+
+Then you can launch Jupyter Notebook in the new (python-workshop) environment
+
+```
+jupyter notebook
+```
+
+Then run a check of the packages in ```check_python_packages.ipynb```.
+
+**If the above step failed...**
+
+You can also run Jupyter Notebooks in your base environment but access the libraries in the environment you created:
+
+Make sure you're in the base environment:
+
+```
+conda activate base
+```
+
+Install some jupyter add-ons into your base environment:
+
+```
+conda install nb_conda_kernels
+```
+
 ### Step 4: If you are running Python < 3.8 (otherwise, skip to step 5)
 
 Users running an older version of Python (3.8 or older): The Short Course will use three packages that are part of the standard Anaconda installation, so they should already be installed on your computer. Depending on the version of Python you have installed, however, you may need to update these packages:
-* cMatplotlib version 3.5.1
+
+* Matplotlib version 3.5.1
 * Xarray version 0.20.1
 * Requests version 2.27.1
 
@@ -111,7 +156,7 @@ These videos provide important background information on NOAA satellites that wo
 First we ask, what makes an image beautiful? 
 
 ### What makes a beautiful image?
-Creating a beautiful image is about making a "work of art" (although some are!), but rather adhere to the following principles:
+Creating a beautiful image is not about making a "work of art" (although some are!), but rather adhere to the following principles:
 
 1. The image has a **purpose** - the viewer knows what they're looking at and why
 2. The image is **well-composed** - are the elements arranged in a way that it makes the purpose more clear. Text and lines are readable and take up appropriate space on graphic
@@ -146,9 +191,16 @@ We will apply this workflow to a variety of sensors and satellites: imagers, sou
 
 ## Getting started
 
-First, we'll check that you installed the right packages by launching jupyter notebooks and running the check_python_packages.ipynb notebook. If there are no errors, fantastic!
+1. Check that you **installed the right packages** by launching jupyter notebooks and running the ```check_python_packages.ipynb``` notebook. If there are no errors, fantastic!
 
-Each notebook contains the full workflow for a single "beautiful" image. The instructors will walk through each one and provide additional context on the steps.
+2. you'll need to **download the datasets**. Work through the ```download_satellite_data.ipynb``` notebook; this will save a local copy of all the datasets used in the tutorial.
+
+3. Each of the remaining notebook contains the **full workflow for a single "beautiful" image**. You can work through them in any order if you are doing this course on your own time. The notebooks/images are:
+
+* viirs_aerosol.ipynb: Global L3 AOD from VIIRS
+* abi_rgb.ipynb: DustRGB from GOES-16 ABI channels
+* nucaps_skewt.ipynb: NUCAPS Skew-T from CrIS/ATMS on NOAA-20
+* viirs_aerosol.ipynb: L2 Active Fire from the VIIRS I-band
 
 ## Course Philosophy
 
